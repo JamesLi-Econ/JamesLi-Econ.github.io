@@ -15,7 +15,7 @@
     }
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #f0f0f0; /* Light gray for better contrast */
       color: #333;
       display: flex;
       flex-direction: column;
@@ -43,5 +43,77 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.3); /* Brighter overlay */
+      background-color: rgba(0, 0, 0, 0.4); /* Slightly darker for readability */
     }
+    header h1, header p, .profile-pic {
+      position: relative;
+      z-index: 1;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 10px;
+    }
+    section {
+      max-width: 800px;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Better contrast */
+      margin-bottom: 20px;
+    }
+    a {
+      color: #007ACC;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="profile.JPG" alt="James Li's Profile Picture" class="profile-pic">
+    <h1>James Li</h1>
+    <p>Economics Enthusiast | Aspiring Academic</p>
+  </header>
+  
+  <section>
+    <h2>About Me</h2>
+    <p>
+      Hello, I'm James Li, a dedicated student at UW-Madison with a strong passion for economics and academic research.
+      I am committed to exploring innovative ideas and contributing to economic discourse.
+    </p>
+  </section>
+  
+  <section>
+    <h2>Projects & Research</h2>
+    <p>
+      Explore my projects and research work on 
+      <a href="https://github.com/jamesli-econ" target="_blank">GitHub</a>. 
+      Here you'll find a collection of my academic and applied economic studies.
+    </p>
+  </section>
+  
+  <section>
+    <h2>Resume</h2>
+    <p>
+      Interested in learning more about my academic journey and experience? 
+      <a href="resume.pdf" download>Download my resume</a>.
+    </p>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 James Li. All rights reserved.</p>
+  </footer>
+</body>
+</html>
