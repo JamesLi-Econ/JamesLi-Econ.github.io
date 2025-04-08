@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>James Li - Portfolio</title>
+  <title>James Li - Academic Economics Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -59,7 +59,8 @@
       margin-bottom: 10px;
     }
     section {
-      max-width: 800px;
+      width: 100%;
+      max-width: 1100px;
       background-color: #ffffff;
       padding: 30px;
       border-radius: 8px;
@@ -74,9 +75,16 @@
     a:hover {
       text-decoration: underline;
     }
+    .iframe-container {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 10px;
+    }
     iframe {
       width: 100%;
-      height: 400px;
+      height: 500px;
       border: none;
     }
     footer {
@@ -92,7 +100,7 @@
   <header>
     <img src="profile.JPG" alt="James Li's Profile Picture" class="profile-pic">
     <h1>James Li</h1>
-    <p>Aspiring Economics Enthusiast | International Macroeconomics, Industrial Organization, Monetary Economics.</p>
+    <p>Economics Enthusiast | International Macroeconomics, Industrial Organization, Monetary Economics.</p>
   </header>
 
   <section>
@@ -118,17 +126,17 @@
     <h2>About Me</h2>
     <p>
       I am James Li, a student at UW-Madison pursuing Economics, Mathematics, and Data Science. My academic journey 
-      is driven by a passion for understanding economic systems, financial markets, macroeconomic policy, and environment market equilibriums. I have 
+      is driven by a passion for understanding economic systems, financial markets, and macroeconomic policy. I have 
       a deep interest in applying data-driven methodologies to analyze economic trends and provide actionable insights. 
     </p>
     <p>
-      My experience includes research at UC Riverside’s Behavioral and Decision-Making Lab, leading teams in the 
-      Federal Reserve Challenge, economic case analysis on short-term market supply shocks from clean energy transition programs, and in-depth coursework on international macroecoomics and econometrics. I am proficient 
+      My experience includes research at UC Riverside’s Behavioral and Decision-Making Lab, participation in the 
+      Federal Reserve Challenge, and in-depth coursework on international finance and econometrics. I am proficient 
       in Python, R, SQL, Tableau, and Stata, and have worked on projects involving forecasting models, macroeconomic 
-      research, time-series climate analysis, and economic policy analysis. 
+      research, and economic policy analysis. 
     </p>
     <p>
-      I am always eager to explore new opportunities that blend economics analysis, data analytics, and governmental policies. If you 
+      I am always eager to explore new opportunities that blend economics, data science, and financial policy. If you 
       are interested in my work, feel free to check out my projects below.
     </p>
   </section>
@@ -148,12 +156,12 @@
       View a preview of my resume below or 
       <a href="resume.pdf" download>Download my resume</a>.
     </p>
-    
-    <!-- Resume Preview (Embedded PDF) -->
-    <iframe src="resume.pdf">
-      Your browser does not support PDFs. 
-      <a href="resume.pdf" download>Download the resume</a> instead.
-    </iframe>
+    <div class="iframe-container">
+      <iframe src="resume.pdf">
+        Your browser does not support PDFs. 
+        <a href="resume.pdf" download>Download the resume</a> instead.
+      </iframe>
+    </div>
   </section>
 
   <section>
@@ -161,15 +169,19 @@
 
     <h3>RStudio Project: Weather Analysis</h3>
     <p>
-      An interactive weather trend analysis using R and ggplot2. Explore how seasonal patterns correlate with climate behavior.
+      An interactive data exploration of weather trends using R and ggplot2, exported from RStudio.
     </p>
-    <iframe src="weather_analysis.html" height="500px"></iframe>
+    <div class="iframe-container">
+      <iframe src="rstudio_show.pdf"></iframe>
+    </div>
 
     <h3>Stata Output: Labor Market Analysis</h3>
     <p>
-      A statistical regression project using Stata's SMCL output. Note: This file may not render in your browser. It’s best viewed in Stata.
+      A statistical regression and analysis project conducted using Stata, focused on labor economics.
     </p>
-    <a href="stata_show.smcl" download>Download Stata Log File</a>
+    <div class="iframe-container">
+      <iframe src="stata_show.pdf"></iframe>
+    </div>
   </section>
 
   <footer>
