@@ -3,65 +3,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About - James Li</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>James Li – About</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f0f0f0;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      min-height: 100vh;
-    }
-    nav { background-color: #fff; width: 100%; padding: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; position: sticky; top: 0; z-index: 1000; margin-bottom: 20px; }
-    nav a { color: #007ACC; margin: 0 20px; text-decoration: none; font-weight: 500; font-size: 1rem; }
-    nav a:hover { text-decoration: underline; }
-    header { width: 100%; min-height: 200px; position: relative; margin-bottom: 40px; color: #fff; text-align: center;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      background: url("red_banner.jpg") center center no-repeat; background-size: cover;
-    }
-    header::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4); }
-    header h1, .profile-pic { position: relative; z-index: 1; }
-    .profile-pic { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; margin-bottom: 10px; }
-    section { width: 100%; max-width: 800px; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 20px; }
-    footer { margin-top: 30px; font-size: 0.9em; color: #555; text-align: center; }
-    .footer-links a { margin: 0 10px; color: #555; }
+    body { margin: 0; font-family: 'Roboto', sans-serif; background: #f8f8f8; color: #333; }
+    .site { display: flex; max-width: 1000px; margin: 0 auto; }
+    .sidebar { width: 250px; background: #fafafa; padding: 40px 20px; border-right: 1px solid #ddd; box-shadow: 2px 0 5px rgba(0,0,0,0.03); }
+    .sidebar .avatar { width: 150px; height: 150px; border-radius: 50%; display: block; margin: 0 auto 20px; }
+    .sidebar h1 { font-size: 1.5rem; text-align: center; margin-bottom: 5px; }
+    .sidebar .tagline { font-size: 0.9rem; text-align: center; color: #666; margin-bottom: 30px; }
+    .sidebar nav ul { list-style: none; padding: 0; }
+    .sidebar nav li { margin: 10px 0; }
+    .sidebar nav a { text-decoration: none; color: #007ACC; font-weight: 500; }
+    .sidebar nav a:hover { text-decoration: underline; }
+
+    .content { flex: 1; padding: 40px 30px; }
+    .content h2 { font-size: 2rem; margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+    .content p { line-height: 1.6; margin-bottom: 15px; }
+    footer { text-align: center; font-size: 0.8rem; padding: 20px; color: #888; }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="project.html">Projects</a>
-    <a href="resume.pdf" target="_blank">Resume</a>
-  </nav>
-
-  <header>
-    <img src="profile.JPG" alt="James Li's Profile Picture" class="profile-pic" />
-    <h1>James Li</h1>
-  </header>
-
-  <section>
-    <h2>About Me</h2>
-    <p>I am James Li, a student at UW-Madison pursuing Economics, Mathematics, and Data Science. My academic journey is driven by a passion for understanding economic systems, financial markets, and macroeconomic policy. I have a deep interest in applying data-driven methodologies to analyze economic trends and provide actionable insights.</p>
-    <p>My experience includes research at UC Riverside’s Behavioral and Decision-Making Lab, participation in the Federal Reserve Challenge, in-depth coursework on international finance and econometrics. I am proficient in Python, R, SQL, Tableau, and Stata, and have worked on projects involving forecasting models, macroeconomic research, and economic policy analysis.</p>
-    <p>I am always eager to explore new opportunities that blend economics, data science, and financial policy. If you are interested in my work, feel free to check out my projects on the Projects page.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 James Li. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="mailto:jli@wisc.edu">Email</a> |
-      <a href="https://github.com/jamesli-econ" target="_blank">GitHub</a>
-    </div>
-  </footer>
+  <div class="site">
+    <aside class="sidebar">
+      <img src="profile.JPG" alt="James Li" class="avatar">
+      <h1>James Li</h1>
+      <p class="tagline">Economics Enthusiast</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="content">
+      <h2>About Me</h2>
+      <p>I’m James Li, a UW‑Madison student majoring in Economics, Mathematics, and Data Science. I’m passionate about economic systems, financial markets, and monetary policy.</p>
+      <p>My work spans research at UC Riverside’s Behavioral Lab, leadership in the Federal Reserve Challenge, and advanced coursework in econometrics and international macroeconomics.</p>
+      <p>Proficient in Python, R, SQL, Tableau, and Stata, I build forecasting models, run regressions, and translate data into policy insights.</p>
+      <p>Outside of academia, I enjoy coding side projects, exploring IO theory in real markets, and learning about energy economics.</p>
+    </main>
+  </div>
+  <footer>&copy; 2025 James Li</footer>
 </body>
 </html>

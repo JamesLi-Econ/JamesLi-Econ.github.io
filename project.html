@@ -1,68 +1,62 @@
 
 
-<!-- project.html -->
+<!-- projects.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects - James Li</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>James Li – Projects</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Roboto', sans-serif; background-color: #f0f0f0; color: #333; display: flex; flex-direction: column; align-items: center; padding: 20px; min-height: 100vh; }
-    nav { background-color: #fff; width: 100%; padding: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; position: sticky; top: 0; z-index: 1000; margin-bottom: 20px; }
-    nav a { color: #007ACC; margin: 0 20px; text-decoration: none; font-weight: 500; font-size: 1rem; }
-    nav a:hover { text-decoration: underline; }
-    header { width: 100%; min-height: 200px; position: relative; margin-bottom: 40px; color: #fff; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; background: url("red_banner.jpg") center center no-repeat; background-size: cover; }
-    header::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4); }
-    header h1, .profile-pic { position: relative; z-index: 1; }
-    .profile-pic { display: none; }
-    section { width: 100%; max-width: 1100px; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 20px; }
-    .iframe-container { width: 100%; overflow: hidden; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 10px; }
-    iframe { width: 100%; height: 500px; border: none; }
-    footer { margin-top: 30px; font-size: 0.9em; color: #555; text-align: center; }
-    .footer-links a { margin: 0 10px; color: #555; }
+    body { margin: 0; font-family: 'Roboto', sans-serif; background: #f8f8f8; color: #333; }
+    .site { display: flex; max-width: 1000px; margin: 0 auto; }
+    .sidebar { width: 250px; background: #fafafa; padding: 40px 20px; border-right: 1px solid #ddd; box-shadow: 2px 0 5px rgba(0,0,0,0.03); }
+    .sidebar .avatar { width: 150px; height: 150px; border-radius: 50%; display: block; margin: 0 auto 20px; }
+    .sidebar h1 { font-size: 1.5rem; text-align: center; margin-bottom: 5px; }
+    .sidebar .tagline { font-size: 0.9rem; text-align: center; color: #666; margin-bottom: 30px; }
+    .sidebar nav ul { list-style: none; padding: 0; }
+    .sidebar nav li { margin: 10px 0; }
+    .sidebar nav a { text-decoration: none; color: #007ACC; font-weight: 500; }
+    .sidebar nav a:hover { text-decoration: underline; }
+
+    .content { flex: 1; padding: 40px 30px; }
+    .content h2 { font-size: 2rem; margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+    .content section { margin-bottom: 40px; }
+    .content section h3 { font-size: 1.4rem; margin-bottom: 10px; }
+    .iframe-container { margin-top: 15px; border: 1px solid #ddd; border-radius: 4px; overflow: hidden; }
+    .iframe-container iframe { width: 100%; height: 350px; border: none; }
+    footer { text-align: center; font-size: 0.8rem; padding: 20px; color: #888; }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="project.html">Projects</a>
-    <a href="resume.pdf" target="_blank">Resume</a>
-  </nav>
-
-  <header>
-    <h1>Projects & Research</h1>
-  </header>
-
-  <section>
-    <h3>RStudio Project: Weather Analysis</h3>
-    <p>An interactive data exploration of weather trends using R and ggplot2, exported from RStudio.</p>
-    <div class="iframe-container">
-      <iframe src="rstudio_show.pdf"></iframe>
-    </div>
-    <p>Lake Monona in Madison, Wisconsin has been monitored for over a century, providing a unique opportunity to study how winter durations have changed over time. I set out to examine the relationship between the timing of the first freeze and the total length of winter to identify potential climate trends. Using RStudio and the tidyverse, I cleaned and visualized the dataset with histograms, scatter plots, and regression lines—both overall and across historical periods. The analysis revealed a clear decline in the duration of winter and a delayed onset of freezing in more recent decades. These findings suggest evidence of local climate change and provide a basis for deeper research into regional environmental patterns.</p>
-  </section>
-
-  <section>
-    <h3>Stata Output: Labor Market and Betting Models</h3>
-    <p>A statistical regression and analysis project conducted using Stata, focused on labor economics and sports betting markets.</p>
-    <div class="iframe-container">
-      <iframe src="stata_show.pdf"></iframe>
-    </div>
-    <p>This project involved applying econometric techniques to real-world datasets to test hypotheses related to racial discrimination in lending and the predictive power of betting spreads. My task was to evaluate whether white applicants were more likely to be approved for mortgage loans and whether betting spreads efficiently forecast college basketball outcomes. Using Stata, I estimated a linear probability model and found that the coefficient on the white applicant variable was 0.0427, indicating a 4.27 percentage point higher approval rate for white applicants, even after controlling for financial and demographic variables. I also used both linear and probit models to assess how point spreads relate to actual game outcomes. The results pointed to persistent disparities in financial access and demonstrated that betting spreads carry strong predictive information—highlighting real-world bias in credit markets and rational behavior in betting systems.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 James Li. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="mailto:jli@wisc.edu">Email</a> |
-      <a href="https://github.com/jamesli-econ" target="_blank">GitHub</a>
-    </div>
-  </footer>
+  <div class="site">
+    <aside class="sidebar">
+      <img src="profile.JPG" alt="James Li" class="avatar">
+      <h1>James Li</h1>
+      <p class="tagline">Economics Enthusiast</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="content">
+      <h2>Projects & Research</h2>
+      <section>
+        <h3>Weather Analysis (RStudio)</h3>
+        <p>Lake Monona winter trends over 100+ years with R (tidyverse, ggplot2).</p>
+        <div class="iframe-container"><iframe src="rstudio_show.pdf"></iframe></div>
+      </section>
+      <section>
+        <h3>Labor & Betting Models (Stata)</h3>
+        <p>Econometric analysis of mortgage approval disparities and betting spreads predictive power.</p>
+        <div class="iframe-container"><iframe src="stata_show.pdf"></iframe></div>
+      </section>
+    </main>
+  </div>
+  <footer>&copy; 2025 James Li</footer>
 </body>
 </html>
