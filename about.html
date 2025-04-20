@@ -1,0 +1,67 @@
+
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - James Li</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    nav { background-color: #fff; width: 100%; padding: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; position: sticky; top: 0; z-index: 1000; margin-bottom: 20px; }
+    nav a { color: #007ACC; margin: 0 20px; text-decoration: none; font-weight: 500; font-size: 1rem; }
+    nav a:hover { text-decoration: underline; }
+    header { width: 100%; min-height: 200px; position: relative; margin-bottom: 40px; color: #fff; text-align: center;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: url("red_banner.jpg") center center no-repeat; background-size: cover;
+    }
+    header::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4); }
+    header h1, .profile-pic { position: relative; z-index: 1; }
+    .profile-pic { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; margin-bottom: 10px; }
+    section { width: 100%; max-width: 800px; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 20px; }
+    footer { margin-top: 30px; font-size: 0.9em; color: #555; text-align: center; }
+    .footer-links a { margin: 0 10px; color: #555; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="project.html">Projects</a>
+    <a href="resume.pdf" target="_blank">Resume</a>
+  </nav>
+
+  <header>
+    <img src="profile.JPG" alt="James Li's Profile Picture" class="profile-pic" />
+    <h1>James Li</h1>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I am James Li, a student at UW-Madison pursuing Economics, Mathematics, and Data Science. My academic journey is driven by a passion for understanding economic systems, financial markets, and macroeconomic policy. I have a deep interest in applying data-driven methodologies to analyze economic trends and provide actionable insights.</p>
+    <p>My experience includes research at UC Riverside’s Behavioral and Decision-Making Lab, participation in the Federal Reserve Challenge, in-depth coursework on international finance and econometrics. I am proficient in Python, R, SQL, Tableau, and Stata, and have worked on projects involving forecasting models, macroeconomic research, and economic policy analysis.</p>
+    <p>I am always eager to explore new opportunities that blend economics, data science, and financial policy. If you are interested in my work, feel free to check out my projects on the Projects page.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 James Li. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="mailto:jli@wisc.edu">Email</a> |
+      <a href="https://github.com/jamesli-econ" target="_blank">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>

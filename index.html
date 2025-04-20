@@ -1,18 +1,15 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>James Li - Academic Economics Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>James Li Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Roboto', sans-serif;
       background-color: #f0f0f0;
@@ -23,6 +20,25 @@
       padding: 20px;
       min-height: 100vh;
     }
+    nav {
+      background-color: #fff;
+      width: 100%;
+      padding: 15px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      margin-bottom: 20px;
+    }
+    nav a {
+      color: #007ACC;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    nav a:hover { text-decoration: underline; }
     header {
       width: 100%;
       min-height: 300px;
@@ -46,10 +62,7 @@
       height: 100%;
       background-color: rgba(0, 0, 0, 0.4);
     }
-    header h1, header p, .profile-pic {
-      position: relative;
-      z-index: 1;
-    }
+    header h1, header p, .profile-pic { position: relative; z-index: 1; }
     .profile-pic {
       width: 150px;
       height: 150px;
@@ -61,138 +74,133 @@
     section {
       width: 100%;
       max-width: 1100px;
-      background-color: #ffffff;
+      background-color: #fff;
       padding: 30px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       margin-bottom: 20px;
     }
-    a {
-      color: #007ACC;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: #007ACC; text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
     .iframe-container {
-      width: 100%;
-      overflow: hidden;
+      width: 100%; overflow: hidden;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       margin-top: 10px;
     }
-    iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-    }
+    iframe { width: 100%; height: 500px; border: none; }
     footer {
-      margin-top: 20px;
+      margin-top: 30px;
       font-size: 0.9em;
       color: #555;
-      padding: 20px;
       text-align: center;
+    }
+    .footer-links a {
+      margin: 0 10px;
+      color: #555;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="project.html">Projects</a>
+    <a href="resume.pdf" target="_blank">Resume</a>
+  </nav>
+
   <header>
-    <img src="profile.JPG" alt="James Li's Profile Picture" class="profile-pic">
+    <img src="profile.JPG" alt="James Li's Profile Picture" class="profile-pic" />
     <h1>James Li</h1>
     <p>Economics Enthusiast | International Macroeconomics, Industrial Organization, Monetary Economics.</p>
   </header>
 
-  <section>
+  <section id="skills">
     <h2>Skills & Tools</h2>
     <p><strong>Python Libraries & Frameworks:</strong></p>
-    <p>
-      SQLite3, Pandas, NumPy, Matplotlib, BeautifulSoup, Selenium, Geopandas, Flask, A/B Testing, Scikit-learn, 
-      Dockerfile, gRPC, MySQL, SQLAlchemy, Apache Spark, Cassandra, PyArrow, Parquet, Bash, Shell scripting
+    <p>SQLite3, Pandas, NumPy, Matplotlib, BeautifulSoup, Selenium, Geopandas, Flask, A/B Testing,
+      Scikit-learn, Dockerfile, gRPC, MySQL, SQLAlchemy, Apache Spark, Cassandra, PyArrow,
+      Parquet, Bash, Shell scripting
     </p>
-
     <p><strong>RStudio Packages & Techniques:</strong></p>
-    <p>
-      Tidyverse, ggplot2, dplyr, readr, lubridate, infer, linear regression, Monte Carlo simulation
-    </p>
-
+    <p>Tidyverse, ggplot2, dplyr, readr, lubridate, infer, linear regression, Monte Carlo simulation</p>
     <p><strong>Development & Workflow Tools:</strong></p>
-    <p>
-      GitLab version control, working with files and pipelines, Virtual Machines (VMs)
-    </p>
+    <p>GitLab version control, working with files and pipelines, Virtual Machines (VMs)</p>
   </section>
-  
-  <section>
+
+  <section id="about">
     <h2>About Me</h2>
-    <p>
-      I am James Li, a student at UW-Madison pursuing Economics, Mathematics, and Data Science. My academic journey 
-      is driven by a passion for understanding economic systems, financial markets, and macroeconomic policy. I have 
-      a deep interest in applying data-driven methodologies to analyze economic trends and provide actionable insights. 
-    </p>
-    <p>
-      My experience includes research at UC Riverside’s Behavioral and Decision-Making Lab, participation in the 
-      Federal Reserve Challenge, in-depth coursework on international finance and econometrics. I am proficient 
-      in Python, R, SQL, Tableau, and Stata, and have worked on projects involving forecasting models, macroeconomic 
-      research, and economic policy analysis. 
-    </p>
-    <p>
-      I am always eager to explore new opportunities that blend economics, data science, and financial policy. If you 
-      are interested in my work, feel free to check out my projects below.
-    </p>
+    <p>I am James Li, a student at UW-Madison pursuing Economics, Mathematics, and Data Science. My academic journey
+      is driven by a passion for understanding economic systems, financial markets, and macroeconomic policy.
+      I have a deep interest in applying data-driven methodologies to analyze economic trends and provide
+      actionable insights.</p>
+    <p>My experience includes research at UC Riverside’s Behavioral and Decision-Making Lab, participation in the
+      Federal Reserve Challenge, in-depth coursework on international finance and econometrics. I am proficient
+      in Python, R, SQL, Tableau, and Stata, and have worked on projects involving forecasting models,
+      macroeconomic research, and economic policy analysis.</p>
+    <p>I am always eager to explore new opportunities that blend economics, data science, and financial policy.
+      If you are interested in my work, feel free to check out my projects below.</p>
   </section>
-  
-  <section>
+
+  <section id="projects">
     <h2>Projects & Research</h2>
-    <p>
-      Explore my projects and research work on 
-      <a href="https://github.com/jamesli-econ" target="_blank">GitHub</a>. 
-      Here you'll find a collection of my academic and applied economic studies.
-    </p>
+    <p>Explore my projects and research work on
+      <a href="https://github.com/jamesli-econ" target="_blank">GitHub</a>.
+      Here you'll find a collection of my academic and applied economic studies.</p>
   </section>
-  
-  <section>
+
+  <section id="resume">
     <h2>Resume</h2>
-    <p>
-      View a preview of my resume below or 
-      <a href="resume.pdf" download>Download my resume</a>.
-    </p>
+    <p>View a preview of my resume below or <a href="resume.pdf" download>Download my resume</a>.</p>
     <div class="iframe-container">
       <iframe src="resume.pdf">
-        Your browser does not support PDFs.
-        <a href="resume.pdf" download>Download the resume</a> instead.
+        Your browser does not support PDFs. <a href="resume.pdf" download>Download the resume</a> instead.
       </iframe>
     </div>
   </section>
 
-  <section>
+  <section id="gallery">
     <h2>Gallery</h2>
-  
     <h3>RStudio Project: Weather Analysis</h3>
-    <p>
-      An interactive data exploration of weather trends using R and ggplot2, exported from RStudio.
+    <p>An interactive data exploration of weather trends using R and ggplot2, exported from RStudio.
     </p>
     <div class="iframe-container">
       <iframe src="rstudio_show.pdf"></iframe>
     </div>
-    <p>
-      Lake Monona in Madison, Wisconsin has been monitored for over a century, providing a unique opportunity to study how winter durations have changed over time. I set out to examine the relationship between the timing of the first freeze and the total length of winter to identify potential climate trends. Using RStudio and the tidyverse, I cleaned and visualized the dataset with histograms, scatter plots, and regression lines—both overall and across historical periods. The analysis revealed a clear decline in the duration of winter and a delayed onset of freezing in more recent decades. These findings suggest evidence of local climate change and provide a basis for deeper research into regional environmental patterns.
-    </p>
-  
+    <p>Lake Monona in Madison, Wisconsin has been monitored for over a century, providing a unique
+      opportunity to study how winter durations have changed over time. I set out to examine the relationship
+      between the timing of the first freeze and the total length of winter to identify potential climate trends.
+      Using RStudio and the tidyverse, I cleaned and visualized the dataset with histograms, scatter plots,
+      and regression lines—both overall and across historical periods. The analysis revealed a clear decline in
+      the duration of winter and a delayed onset of freezing in more recent decades. These findings suggest
+      evidence of local climate change and provide a basis for deeper research into regional environmental patterns.</p>
+
     <h3>Stata Output: Labor Market and Betting Models</h3>
-    <p>
-      A statistical regression and analysis project conducted using Stata, focused on labor economics and sports betting markets.
+    <p>A statistical regression and analysis project conducted using Stata, focused on labor economics and
+      sports betting markets.
     </p>
     <div class="iframe-container">
       <iframe src="stata_show.pdf"></iframe>
     </div>
-    <p>
-      This project involved applying econometric techniques to real-world datasets to test hypotheses related to racial discrimination in lending and the predictive power of betting spreads. My task was to evaluate whether white applicants were more likely to be approved for mortgage loans and whether betting spreads efficiently forecast college basketball outcomes. Using Stata, I estimated a linear probability model and found that the coefficient on the white applicant variable was 0.0427, indicating a 4.27 percentage point higher approval rate for white applicants, even after controlling for financial and demographic variables. I also used both linear and probit models to assess how point spreads relate to actual game outcomes. The results pointed to persistent disparities in financial access and demonstrated that betting spreads carry strong predictive information—highlighting real-world bias in credit markets and rational behavior in betting systems.
-    </p>
+    <p>This project involved applying econometric techniques to real-world datasets to test hypotheses related to
+      racial discrimination in lending and the predictive power of betting spreads. My task was to evaluate
+      whether white applicants were more likely to be approved for mortgage loans and whether betting spreads
+      efficiently forecast college basketball outcomes. Using Stata, I estimated a linear probability model and
+      found that the coefficient on the white applicant variable was 0.0427, indicating a 4.27 percentage point
+      higher approval rate for white applicants, even after controlling for financial and demographic variables.
+      I also used both linear and probit models to assess how point spreads relate to actual game outcomes. The
+      results pointed to persistent disparities in financial access and demonstrated that betting spreads carry
+      strong predictive information—highlighting real-world bias in credit markets and rational behavior in betting systems.</p>
   </section>
-  
 
   <footer>
     <p>&copy; 2025 James Li. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="mailto:jli@wisc.edu">Email</a> |
+      <a href="https://github.com/jamesli-econ" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/jamesli-econ/" target="_blank">LinkedIn</a>
+    </div>
   </footer>
 </body>
 </html>
+

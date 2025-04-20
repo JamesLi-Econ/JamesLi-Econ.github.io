@@ -1,0 +1,68 @@
+
+
+<!-- project.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - James Li</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background-color: #f0f0f0; color: #333; display: flex; flex-direction: column; align-items: center; padding: 20px; min-height: 100vh; }
+    nav { background-color: #fff; width: 100%; padding: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; position: sticky; top: 0; z-index: 1000; margin-bottom: 20px; }
+    nav a { color: #007ACC; margin: 0 20px; text-decoration: none; font-weight: 500; font-size: 1rem; }
+    nav a:hover { text-decoration: underline; }
+    header { width: 100%; min-height: 200px; position: relative; margin-bottom: 40px; color: #fff; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; background: url("red_banner.jpg") center center no-repeat; background-size: cover; }
+    header::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4); }
+    header h1, .profile-pic { position: relative; z-index: 1; }
+    .profile-pic { display: none; }
+    section { width: 100%; max-width: 1100px; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 20px; }
+    .iframe-container { width: 100%; overflow: hidden; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 10px; }
+    iframe { width: 100%; height: 500px; border: none; }
+    footer { margin-top: 30px; font-size: 0.9em; color: #555; text-align: center; }
+    .footer-links a { margin: 0 10px; color: #555; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="project.html">Projects</a>
+    <a href="resume.pdf" target="_blank">Resume</a>
+  </nav>
+
+  <header>
+    <h1>Projects & Research</h1>
+  </header>
+
+  <section>
+    <h3>RStudio Project: Weather Analysis</h3>
+    <p>An interactive data exploration of weather trends using R and ggplot2, exported from RStudio.</p>
+    <div class="iframe-container">
+      <iframe src="rstudio_show.pdf"></iframe>
+    </div>
+    <p>Lake Monona in Madison, Wisconsin has been monitored for over a century, providing a unique opportunity to study how winter durations have changed over time. I set out to examine the relationship between the timing of the first freeze and the total length of winter to identify potential climate trends. Using RStudio and the tidyverse, I cleaned and visualized the dataset with histograms, scatter plots, and regression lines—both overall and across historical periods. The analysis revealed a clear decline in the duration of winter and a delayed onset of freezing in more recent decades. These findings suggest evidence of local climate change and provide a basis for deeper research into regional environmental patterns.</p>
+  </section>
+
+  <section>
+    <h3>Stata Output: Labor Market and Betting Models</h3>
+    <p>A statistical regression and analysis project conducted using Stata, focused on labor economics and sports betting markets.</p>
+    <div class="iframe-container">
+      <iframe src="stata_show.pdf"></iframe>
+    </div>
+    <p>This project involved applying econometric techniques to real-world datasets to test hypotheses related to racial discrimination in lending and the predictive power of betting spreads. My task was to evaluate whether white applicants were more likely to be approved for mortgage loans and whether betting spreads efficiently forecast college basketball outcomes. Using Stata, I estimated a linear probability model and found that the coefficient on the white applicant variable was 0.0427, indicating a 4.27 percentage point higher approval rate for white applicants, even after controlling for financial and demographic variables. I also used both linear and probit models to assess how point spreads relate to actual game outcomes. The results pointed to persistent disparities in financial access and demonstrated that betting spreads carry strong predictive information—highlighting real-world bias in credit markets and rational behavior in betting systems.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 James Li. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="mailto:jli@wisc.edu">Email</a> |
+      <a href="https://github.com/jamesli-econ" target="_blank">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
