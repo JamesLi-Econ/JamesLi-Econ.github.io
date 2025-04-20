@@ -7,8 +7,126 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-  <!-- either put the CSS above here, or link to styles.css -->
-  <style>/* …common CSS from above… */</style>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family:'Roboto',sans-serif;
+      background:#f5f5f5;
+      color:#333;
+    }
+    header.top-nav {
+      background:#fff;
+      border-bottom:1px solid #e1e4e8;
+      height:60px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 20px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+    header .site-title {
+      font-size:1.2rem;
+      font-weight:700;
+    }
+    header nav a {
+      margin-left:20px;
+      color:#0366d6;
+      text-decoration:none;
+      font-weight:500;
+    }
+    header nav a:hover {
+      text-decoration:underline;
+    }
+    .wrapper {
+      display:flex;
+      max-width:1200px;
+      margin:40px auto;
+      background:#fff;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+      border-radius:6px;
+      overflow:hidden;
+    }
+    aside.sidebar {
+      width:280px;
+      background:#f7f7f7;
+      padding:30px 20px;
+      border-right:1px solid #e1e4e8;
+    }
+    aside .profile-pic {
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      display:block;
+      margin:0 auto 15px;
+    }
+    aside h2 {
+      text-align:center;
+      margin-bottom:5px;
+      font-size:1.3rem;
+    }
+    aside .handle {
+      text-align:center;
+      color:#586069;
+      margin-bottom:15px;
+      font-size:0.95rem;
+    }
+    aside .bio {
+      text-align:center;
+      font-size:0.9rem;
+      color:#444;
+      margin-bottom:25px;
+    }
+    aside .contact-list {
+      list-style:none;
+      font-size:0.9rem;
+      color:#444;
+    }
+    aside .contact-list li {
+      margin-bottom:12px;
+    }
+    aside .contact-list a {
+      color:#0366d6;
+      text-decoration:none;
+    }
+    aside .contact-list a:hover {
+      text-decoration:underline;
+    }
+    main.content {
+      flex:1;
+      padding:30px;
+    }
+    main.content h1 {
+      font-size:2rem;
+      margin-bottom:10px;
+      color:#24292e;
+    }
+    main.content h2 {
+      font-size:1.25rem;
+      margin:30px 0 10px;
+      border-bottom:1px solid #e1e4e8;
+      padding-bottom:4px;
+    }
+    .iframe-container {
+      margin-top:15px;
+      border:1px solid #e1e4e8;
+      border-radius:4px;
+      overflow:hidden;
+    }
+    .iframe-container iframe {
+      width:100%;
+      height:500px;
+      border:none;
+    }
+    footer {
+      text-align:center;
+      padding:20px 0;
+      font-size:0.85rem;
+      color:#666;
+    }
+  </style>
 </head>
 <body>
 
@@ -46,7 +164,7 @@
       <h2>Skills &amp; Tools</h2>
       <p><strong>Python:</strong> Pandas, NumPy, Matplotlib, Flask, Scikit‑learn, Spark, Cassandra, Docker, gRPC</p>
       <p><strong>R:</strong> Tidyverse, ggplot2, dplyr, infer</p>
-      <p><strong>Data &amp; Workflow:</strong> SQL, Tableau, Stata, GitLab, Shell scripting</p>
+      <p><strong>Data &amp; Workflow:</strong> SQL, Tableau, Stata, GitLab, Shell scripting</p>
 
       <h2>Featured Gallery</h2>
       <div class="iframe-container">
@@ -55,6 +173,9 @@
     </main>
   </div>
 
-  <footer>&copy; 2025 James Li. All rights reserved.</footer>
+  <footer>
+    &copy; 2025 James Li. All rights reserved.
+  </footer>
+
 </body>
 </html>
