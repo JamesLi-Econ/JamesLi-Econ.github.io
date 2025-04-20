@@ -1,12 +1,70 @@
-
-
-<!-- projects.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>James Li – Projects</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    body { margin: 0; font-family: 'Roboto', sans-serif; background: #f
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects – James Li</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>/* …common CSS from above… */</style>
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="site-title">James Li / Portfolio</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.pdf" target="_blank">Resume</a>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+      <!-- same sidebar as above -->
+      <img src="profile.JPG" class="profile-pic" alt="James Li" />
+      <h2>James Li</h2>
+      <p class="handle">JamesLi‑Econ</p>
+      <p class="bio">
+        Hi! I am a student at the University of Wisconsin‑Madison studying Economics, 
+        Mathematics, and Data Science. I enjoy creating fun stuff in monetary economics!
+      </p>
+      <ul class="contact-list">
+        <li>📍 Madison, WI</li>
+        <li>🎓 University of Wisconsin‑Madison</li>
+        <li>✉️ <a href="mailto:jli@wisc.edu">jli@wisc.edu</a></li>
+        <li>🐙 <a href="https://github.com/jamesli-econ" target="_blank">GitHub</a></li>
+        <li>🔗 <a href="https://www.linkedin.com/in/jamesli-econ/" target="_blank">LinkedIn</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1>Projects &amp; Research</h1>
+
+      <h2>RStudio Project: Weather Analysis</h2>
+      <p>An interactive exploration of Lake Monona winter trends using R (tidyverse, ggplot2).</p>
+      <div class="iframe-container">
+        <iframe src="rstudio_show.pdf"></iframe>
+      </div>
+      <p>
+        We examined first‑freeze timing and winter duration over 100+ years. The visualizations 
+        revealed a trend toward shorter winters and later freezes, suggesting local climate shifts.
+      </p>
+
+      <h2>Stata Project: Labor & Betting Models</h2>
+      <p>Econometric analysis of mortgage approval disparities and college basketball betting markets.</p>
+      <div class="iframe-container">
+        <iframe src="stata_show.pdf"></iframe>
+      </div>
+      <p>
+        Using linear probability and probit models, I found a 4.27 ppt higher approval likelihood 
+        for white applicants, and confirmed that betting spreads have strong predictive power.
+      </p>
+    </main>
+  </div>
+
+  <footer>&copy; 2025 James Li</footer>
+</body>
+</html>
