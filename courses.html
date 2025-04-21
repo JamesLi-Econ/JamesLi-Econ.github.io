@@ -16,10 +16,10 @@
     rel="stylesheet"
   />
 
-  <title>James Li – Projects</title>
+  <title>James Li – Courses</title>
 
   <style>
-    /* (Same variables & reset as index.html) */
+    /* reuse the same root & reset from index.html */
     :root {
       --bg: #f5f5f5;
       --fg: #24292e;
@@ -35,34 +35,10 @@
       color: var(--fg);
       background: var(--bg);
     }
-    header.top-nav {
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header .site-title {
-      font-size: 1.375rem;
-      font-weight: 700;
-      color: var(--fg);
-    }
-    header nav a {
-      margin-left: 1.5rem;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--muted);
-      text-decoration: none;
-    }
-    header nav a:hover {
-      color: var(--link);
-      text-decoration: underline;
-    }
+    header.top-nav { /* same as above */ }
+    header .site-title { /* same as above */ }
+    header nav a { /* same as above */ }
+    header nav a:hover { /* same as above */ }
 
     .wrapper {
       display: flex;
@@ -73,13 +49,8 @@
       border-radius: 6px;
       overflow: hidden;
     }
-    aside.sidebar {
-      width: 280px;
-      background: #f7f7f7;
-      padding: 2rem 1.5rem;
-      border-right: 1px solid var(--border);
-    }
-    /* repeat same sidebar styles as index.html… */
+    aside.sidebar { /* same as above */ }
+    /* …sidebar styles… */
 
     main.content {
       flex: 1;
@@ -90,26 +61,28 @@
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
-    main.content h2 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin: 2rem 0 0.5rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.25rem;
-    }
     main.content p {
       margin-bottom: 1.25rem;
     }
-    .iframe-container {
-      margin: 1rem 0;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      overflow: hidden;
+
+    /* Course list */
+    .course-list {
+      list-style: none;
+      margin-top: 1rem;
     }
-    .iframe-container iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
+    .course-list li {
+      margin-bottom: 1.5rem;
+    }
+    .course-list li h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.25rem;
+    }
+    .course-list li p {
+      margin-left: 0.5rem;
+      color: var(--muted);
     }
 
     footer {
@@ -149,47 +122,30 @@
               <a href="https://www.linkedin.com/in/muhao-li" target="_blank">LinkedIn</a>
             </li>
           </ul>
-      <img src="profile.JPG" alt="James Li" class="profile-pic" />
-      <h2>James Li</h2>
-      <p class="handle">@jamesmuhaoli</p>
-      <p class="bio">
-        UW‑Madison student in Economics, Mathematics & Data Science.  
-        Passionate about monetary economics and data pipelines.
-      </p>
-      <ul class="contact-list">
-        <!-- … -->
-      </ul>
     </aside>
 
     <main class="content">
-      <h1>Projects &amp; Research</h1>
-
-      <h2>RStudio Project: Weather Analysis</h2>
-      <p>
-        An interactive exploration of Lake Monona winter trends using R 
-        (tidyverse, ggplot2).
-      </p>
-      <div class="iframe-container">
-        <iframe src="rstudio_show.pdf"></iframe>
-      </div>
-      <p>
-        We examined first‑freeze timing and winter duration over 100+ years. 
-        Visualizations revealed shorter winters and later freezes—evidence of 
-        local climate shifts.
-      </p>
-
-      <h2>Stata Project: Labor & Betting Models</h2>
-      <p>
-        Econometric analysis of mortgage approval disparities and 
-        college basketball betting markets.
-      </p>
-      <div class="iframe-container">
-        <iframe src="stata_show.pdf"></iframe>
-      </div>
-      <p>
-        Linear probability and probit models showed a 4.27 ppt higher approval 
-        likelihood for white applicants, and strong predictive power in betting spreads.
-      </p>
+      <h1>Selected Courses</h1>
+      <p>Below is a selection of courses I’ve completed at UW‑Madison:</p>
+      <ul class="course-list">
+        <li>
+          <h2>ECON 410: Econometrics</h2>
+          <p>Estimation & inference in linear regression; panel data; IV methods.</p>
+        </li>
+        <li>
+          <h2>ECON 461: International Macroeconomics</h2>
+          <p>Balance of payments, exchange‑rate models, and financial frictions.</p>
+        </li>
+        <li>
+          <h2>CS 544: Big Data Systems</h2>
+          <p>Docker, Spark, Cassandra, gRPC; building fault‑tolerant pipelines.</p>
+        </li>
+        <li>
+          <h2>ECON 468: Industrial Organization</h2>
+          <p>Cournot competition, price discrimination, and market structure analysis.</p>
+        </li>
+        <!-- add more as you like -->
+      </ul>
     </main>
   </div>
 

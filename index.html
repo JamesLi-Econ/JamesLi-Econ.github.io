@@ -4,13 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Font Awesome 5.15.4 -->
+  <!-- Font Awesome & Google Fonts -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
   />
-
-  <title>James Li Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -18,141 +16,155 @@
     rel="stylesheet"
   />
 
+  <title>James Li – Home</title>
+
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family:'Roboto',sans-serif;
-      background:#f5f5f5;
-      color:#333;
+    :root {
+      --bg: #f5f5f5;
+      --fg: #24292e;
+      --muted: #57606a;
+      --link: #0366d6;
+      --border: #e1e4e8;
     }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--fg);
+      background: var(--bg);
+    }
+
+    /* Top nav */
     header.top-nav {
-      background:#fff;
-      border-bottom:1px solid #e1e4e8;
-      height:60px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:0 20px;
-      position:sticky;
-      top:0;
-      z-index:1000;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     header .site-title {
-      font-size:1.2rem;
-      font-weight:700;
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--fg);
     }
     header nav a {
-      margin-left:20px;
-      color:#0366d6;
-      text-decoration:none;
-      font-weight:500;
+      margin-left: 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
     }
     header nav a:hover {
-      text-decoration:underline;
+      color: var(--link);
+      text-decoration: underline;
     }
+
+    /* Layout */
     .wrapper {
-      display:flex;
-      max-width:1200px;
-      margin:40px auto;
-      background:#fff;
-      box-shadow:0 2px 8px rgba(0,0,0,0.05);
-      border-radius:6px;
-      overflow:hidden;
+      display: flex;
+      max-width: 1200px;
+      margin: 3rem auto;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 6px;
+      overflow: hidden;
     }
     aside.sidebar {
-      width:280px;
-      background:#f7f7f7;
-      padding:30px 20px;
-      border-right:1px solid #e1e4e8;
+      width: 280px;
+      background: #f7f7f7;
+      padding: 2rem 1.5rem;
+      border-right: 1px solid var(--border);
     }
     aside .profile-pic {
-      width:120px;
-      height:120px;
-      border-radius:50%;
-      object-fit:cover;
-      display:block;
-      margin:0 auto 15px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 1rem;
     }
     aside h2 {
-      text-align:center;
-      margin-bottom:5px;
-      font-size:1.3rem;
+      text-align: center;
+      font-size: 1.375rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
     }
     aside .handle {
-      text-align:center;
-      color:#586069;
-      margin-bottom:15px;
-      font-size:0.95rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
     }
     aside .bio {
-      text-align:center;
-      font-size:0.9rem;
-      color:#444;
-      margin-bottom:25px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
     }
     aside .contact-list {
-      list-style:none;
-      font-size:0.9rem;
-      color:#444;
+      list-style: none;
+      font-size: 0.875rem;
+      color: var(--muted);
     }
     aside .contact-list li {
-      display:flex;
-      align-items:center;
-      margin-bottom:12px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.75rem;
     }
     aside .contact-list li i {
-      margin-right:8px;
-      font-size:20px;
+      margin-right: 0.5rem;
+      font-size: 1.125rem;
     }
     aside .contact-list a {
-      color:#0366d6;
-      text-decoration:none;
+      color: var(--link);
+      text-decoration: none;
     }
     aside .contact-list a:hover {
-      text-decoration:underline;
+      text-decoration: underline;
     }
+
     main.content {
-      flex:1;
-      padding:30px;
+      flex: 1;
+      padding: 2rem;
     }
     main.content h1 {
-      font-size:2rem;
-      margin-bottom:10px;
-      color:#24292e;
+      font-size: 1.875rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
     }
     main.content h2 {
-      font-size:1.25rem;
-      margin:30px 0 10px;
-      border-bottom:1px solid #e1e4e8;
-      padding-bottom:4px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 2rem 0 0.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.25rem;
     }
-    .iframe-container {
-      margin-top:15px;
-      border:1px solid #e1e4e8;
-      border-radius:4px;
-      overflow:hidden;
+    main.content p {
+      margin-bottom: 1.25rem;
     }
-    .iframe-container iframe {
-      width:100%;
-      height:500px;
-      border:none;
-    }
+
     footer {
-      text-align:center;
-      padding:20px 0;
-      font-size:0.85rem;
-      color:#666;
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.875rem;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
 
   <header class="top-nav">
-    <div class="site-title">James Li / Portfolio</div>
+    <div class="site-title">James Li</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="project.html">Projects</a>
-      <a href="James_Li_Resume.pdf" target="_blank">Resume</a>
+      <a href="courses.html">Courses</a>
     </nav>
   </header>
 
@@ -160,14 +172,14 @@
     <aside class="sidebar">
       <img src="profile.JPG" alt="James Li" class="profile-pic" />
       <h2>James Li</h2>
-      <p class="handle">jamesmuhaoli</p>
+      <p class="handle">@jamesmuhaoli</p>
       <p class="bio">
-        Hi! I am a student at the University of Wisconsin‑Madison studying Economics, 
-        Mathematics, and Data Science. I enjoy creating fun stuff in monetary economics!
+        UW‑Madison student in Economics, Mathematics & Data Science.  
+        Passionate about monetary economics and data pipelines.
       </p>
       <ul class="contact-list">
-        <li><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</li>
-        <li><i class="fas fa-university"></i> University of Wisconsin‑Madison</li>
+        <li><i class="fas fa-map-marker-alt"></i>Los Angeles, CA</li>
+        <li><i class="fas fa-university"></i>UW‑Madison</li>
         <li>
           <i class="fas fa-envelope"></i>
           <a href="mailto:muhao0225@gmail.com">muhao0225@gmail.com</a>
@@ -185,30 +197,24 @@
 
     <main class="content">
       <h1>Welcome</h1>
+      
+      <h2>About Me</h2>
+      <p>
+        I’m James Li, a triple‑majoring student at UW‑Madison. My research spans behavioral
+        economics at UC Riverside’s lab, leading the Federal Reserve Challenge team, and
+        advanced coursework in econometrics & international finance.
+      </p>
+      <p>
+        Outside class, I build data pipelines, model energy markets, and code industrial
+        organization frameworks. Check out my <a href="project.html">Projects</a> or browse
+        my new <a href="courses.html">Courses</a> page.
+      </p>
 
       <h2>Skills &amp; Tools</h2>
-      <p><strong>Data &amp; Workflow:</strong> SQL, Tableau, Stata, GitLab, Shell scripting, Docker, gRPC</p>
-      <p><strong>Python:</strong> Pandas, NumPy, Matplotlib, Flask, Scikit‑learn, Spark, Cassandra, Kafka</p>
-      <p><strong>R:</strong> Tidyverse, ggplot2, dplyr, shiny</p>
+      <p><strong>Data & Workflow:</strong> SQL, Tableau, Stata, GitLab, Shell, Docker, gRPC</p>
+      <p><strong>Python:</strong> Pandas, NumPy, Matplotlib, Flask, Scikit‑learn, Spark, Cassandra</p>
+      <p><strong>R:</strong> tidyverse, ggplot2, dplyr, Shiny</p>
 
-      <h1>About Me</h1>
-      <p>
-        I’m James Li, a UW‑Madison student triple‑majoring in Economics, Mathematics, 
-        and Data Science. My passion lies in understanding economic systems and applying 
-        data‑driven methods to policy and market analysis.
-      </p>
-      <p>
-        I’ve conducted research at UC Riverside’s Behavioral & Decision‑Making Lab, 
-        led my team in the Federal Reserve Challenge, and completed advanced coursework 
-        in econometrics and international finance. I’m fluent in Python, R, SQL, Tableau, 
-        and Stata.
-      </p>
-      <p>
-        Outside of academics, I love building data pipelines, exploring energy markets, 
-        and coding IO models. Feel free to check out my 
-        <a href="project.html">Projects</a> or grab my 
-        <a href="resume.pdf" download>Resume</a>.
-      </p>
     </main>
   </div>
 
