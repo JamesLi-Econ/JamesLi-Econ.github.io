@@ -19,7 +19,6 @@
   <title>James Li – Courses</title>
 
   <style>
-    /* reuse the same root & reset from index.html */
     :root {
       --bg: #f5f5f5;
       --fg: #24292e;
@@ -35,11 +34,38 @@
       color: var(--fg);
       background: var(--bg);
     }
-    header.top-nav { /* same as above */ }
-    header .site-title { /* same as above */ }
-    header nav a { /* same as above */ }
-    header nav a:hover { /* same as above */ }
 
+    /* Top nav */
+    header.top-nav {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header .site-title {
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--fg);
+    }
+    header nav a {
+      margin-left: 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    header nav a:hover {
+      color: var(--link);
+      text-decoration: underline;
+    }
+
+    /* Layout */
     .wrapper {
       display: flex;
       max-width: 1200px;
@@ -49,8 +75,59 @@
       border-radius: 6px;
       overflow: hidden;
     }
-    aside.sidebar { /* same as above */ }
-    /* …sidebar styles… */
+    aside.sidebar {
+      width: 280px;
+      background: #f7f7f7;
+      padding: 2rem 1.5rem;
+      border-right: 1px solid var(--border);
+    }
+    aside .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    aside h2 {
+      text-align: center;
+      font-size: 1.375rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    aside .handle {
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    aside .bio {
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    aside .contact-list {
+      list-style: none;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    aside .contact-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    aside .contact-list li i {
+      margin-right: 0.5rem;
+      font-size: 1.125rem;
+    }
+    aside .contact-list a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    aside .contact-list a:hover {
+      text-decoration: underline;
+    }
 
     main.content {
       flex: 1;
@@ -61,28 +138,15 @@
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
-    main.content p {
-      margin-bottom: 1.25rem;
-    }
-
-    /* Course list */
-    .course-list {
-      list-style: none;
-      margin-top: 1rem;
-    }
-    .course-list li {
-      margin-bottom: 1.5rem;
-    }
-    .course-list li h2 {
+    main.content h2 {
       font-size: 1.25rem;
       font-weight: 600;
-      margin-bottom: 0.25rem;
+      margin: 2rem 0 0.5rem;
       border-bottom: 1px solid var(--border);
       padding-bottom: 0.25rem;
     }
-    .course-list li p {
-      margin-left: 0.5rem;
-      color: var(--muted);
+    main.content p {
+      margin-bottom: 1.25rem;
     }
 
     footer {

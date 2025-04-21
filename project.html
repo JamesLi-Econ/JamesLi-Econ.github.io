@@ -19,7 +19,6 @@
   <title>James Li – Projects</title>
 
   <style>
-    /* (Same variables & reset as index.html) */
     :root {
       --bg: #f5f5f5;
       --fg: #24292e;
@@ -35,6 +34,8 @@
       color: var(--fg);
       background: var(--bg);
     }
+
+    /* Top nav */
     header.top-nav {
       background: #fff;
       border-bottom: 1px solid var(--border);
@@ -64,6 +65,7 @@
       text-decoration: underline;
     }
 
+    /* Layout */
     .wrapper {
       display: flex;
       max-width: 1200px;
@@ -79,7 +81,53 @@
       padding: 2rem 1.5rem;
       border-right: 1px solid var(--border);
     }
-    /* repeat same sidebar styles as index.html… */
+    aside .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    aside h2 {
+      text-align: center;
+      font-size: 1.375rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    aside .handle {
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    aside .bio {
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    aside .contact-list {
+      list-style: none;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    aside .contact-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    aside .contact-list li i {
+      margin-right: 0.5rem;
+      font-size: 1.125rem;
+    }
+    aside .contact-list a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    aside .contact-list a:hover {
+      text-decoration: underline;
+    }
 
     main.content {
       flex: 1;
@@ -99,17 +147,6 @@
     }
     main.content p {
       margin-bottom: 1.25rem;
-    }
-    .iframe-container {
-      margin: 1rem 0;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      overflow: hidden;
-    }
-    .iframe-container iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
     }
 
     footer {
@@ -157,7 +194,20 @@
         Passionate about monetary economics and data pipelines.
       </p>
       <ul class="contact-list">
-        <!-- … -->
+        <li><i class="fas fa-map-marker-alt"></i>Los Angeles, CA</li>
+        <li><i class="fas fa-university"></i>UW‑Madison</li>
+        <li>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:muhao0225@gmail.com">muhao0225@gmail.com</a>
+        </li>
+        <li>
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/jamesmuhaoli" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/muhao-li" target="_blank">LinkedIn</a>
+        </li>
       </ul>
     </aside>
 
